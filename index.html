@@ -9,8 +9,11 @@
 <body>
     <div class="left-page">
         <form id="cadastro">
-            <input type="file" id="foto">
-            <label for="foto">Escolha uma foto</label>
+            <div class="card">
+                <img src="./imagens/profile.png" alt="imagem de perfil" id="pfp" draggable="false">
+                <label for="foto">Enviar Foto</label>
+                <input type="file" accept="image/jpeg, image/png, image/jpg" id="foto">
+            </div>
             <input type="text" id="nome" placeholder="Nome">
             <input type="tel" id="num" placeholder="N° de Telefone">
             <button type="submit">Cadastrar</button>

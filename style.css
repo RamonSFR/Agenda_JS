@@ -35,16 +35,33 @@ input[type="file"]{
     display: none;
 }
 
-label[for="foto"]{
-    background-image: url("./imagens/icone_foto.jpg");
-    margin-bottom: 10%;
-    text-align: center;
-    border: 2px solid black;
+label[for="foto"] {
+    display: block;
     width: 200px;
-    height: 267px;
-    display: grid;
-    place-content: center;
+    background: #aeb4b7;
+    color: #fff;
+    padding: 12px;
+    margin: 10px auto;
+    border-radius: 5px;
+    cursor: pointer;
 }
+
+.card {
+    width: 400px;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    color: #333;
+}
+
+.card img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
 
 ::placeholder {
     font-size: 15pt;
