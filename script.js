@@ -20,7 +20,6 @@ form.addEventListener('submit', (e) => {
 function adicionaLinha() {
     const nome = document.querySelector('#nome');
     const tel = document.querySelector('#num');
-    let foto = document.querySelector('#foto');
 
     if (contatosNomes.includes(nome.value) || contatosNs.includes(tel.value)) {
         alert("Esse contato já existe!")
@@ -29,11 +28,7 @@ function adicionaLinha() {
         contatosNs.push(tel.value);
 
         let linha = '<tr>';
-        if (foto != '') {
-            linha += `<td><img src="./imagens/profile.png" alt="Foto de Perfil"></td>`
-        } else {
-            linha += `<td><img src="./imagens/profile.png" alt="Foto de Perfil"></td>`
-        }
+        linha += `<td><img src="${fotoInput.files.length > 0 ? URL.createObjectURL(fotoInput.files[0]) : './imagens/profile.png'}" alt="Foto de Perfil"></td>`
         linha += `<td>${nome.value}</td>`
         linha += `<td>${tel.value}</td>`
         linha += `</tr>`
@@ -42,7 +37,8 @@ function adicionaLinha() {
 
         nome.value = '';
         tel.value = '';
-        foto.value = ''
+        fotoInput.value = ''
+        pfp.src = './imagens/profile.png';
     }
 }
 
